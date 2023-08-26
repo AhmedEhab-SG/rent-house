@@ -11,19 +11,17 @@ export interface IListingsParams {
   category?: string;
 }
 
-export default async function getListings(params: IListingsParams) {
+const getListings = async ({
+  userId,
+  bathroomCount,
+  category,
+  endDate,
+  guestCount,
+  locationValue,
+  roomCount,
+  startDate,
+}: IListingsParams) => {
   try {
-    const {
-      userId,
-      roomCount,
-      guestCount,
-      bathroomCount,
-      locationValue,
-      startDate,
-      endDate,
-      category,
-    } = params;
-
     let query: any = {};
 
     if (userId) {
@@ -91,4 +89,6 @@ export default async function getListings(params: IListingsParams) {
   } catch (error: any) {
     throw new Error(error);
   }
-}
+};
+
+export default getListings;
