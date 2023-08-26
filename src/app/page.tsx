@@ -3,18 +3,22 @@ import EmptyState from "@/components/shared/EmptyState";
 import getListing, { IListingsParams } from "./actions/getListing";
 import ListingCard from "@/components/listing/ListingCard";
 import getCurrentUser from "./actions/getCurrentUser";
+import ClientOnly from "@/components/shared/ClientOnly";
 
-interface HomePage {
+interface IParams {
   searchParams: IListingsParams;
 }
 
-export default async function Home(params: HomePage) {
-  const { searchParams } = params;
+const HomePage = async ({ searchParams }: IParams) => {
   const listingArr = await getListing(searchParams);
   const currentUser = await getCurrentUser();
 
   if (listingArr.length === 0) {
-    return <EmptyState showReset />;
+    return (
+      <ClientOnly>
+        <EmptyState showReset />
+      </ClientOnly>
+    );
   }
 
   const listing = listingArr.map((listing) => {
@@ -24,9 +28,10 @@ export default async function Home(params: HomePage) {
   });
 
   return (
-    <Container>
-      <div
-        className="
+    <ClientOnly>
+      <Container>
+        <div
+          className="
         pt-24
         grid
         grid-cols-1
@@ -36,9 +41,12 @@ export default async function Home(params: HomePage) {
         xl:grid-cols-5 
         2xl:grid-cols-6
         gap-8"
-      >
-        {listing}
-      </div>
-    </Container>
+        >
+          {listing}
+        </div>
+      </Container>
+    </ClientOnly>
   );
-}
+};
+
+export default HomePage;

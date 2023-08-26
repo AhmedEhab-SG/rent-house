@@ -1,4 +1,4 @@
-"use clinet";
+"use client";
 
 import useCountries from "@/hooks/useCounties";
 import { SafeUser } from "@/types";

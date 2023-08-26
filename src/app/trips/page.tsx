@@ -3,6 +3,7 @@ import EmptyState from "@/components/shared/EmptyState";
 import getCurrentUser from "../actions/getCurrentUser";
 import getReservations from "../actions/getReservations";
 import TripClient from "./TripClient";
+import ClientOnly from "@/components/shared/ClientOnly";
 
 const TripsPages = async () => {
   const currentUser = await getCurrentUser();
@@ -24,7 +25,11 @@ const TripsPages = async () => {
     );
   }
 
-  return <TripClient reservations={reservations} currentUser={currentUser} />;
+  return (
+    <ClientOnly>
+      <TripClient reservations={reservations} currentUser={currentUser} />
+    </ClientOnly>
+  );
 };
 
 export default TripsPages;
