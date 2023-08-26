@@ -156,7 +156,7 @@ const SearchModal = () => {
       <div className="flex flex-col gap-8">
         <Heading title="More information" subtitle="Find you perfect place!" />
         <Counter
-          title="Guets"
+          title="Guests"
           subtitle="How many guests are coming?"
           value={guestCount}
           onChange={(value) => setGuestCount(value)}
