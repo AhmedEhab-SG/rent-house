@@ -124,7 +124,7 @@ const SearchModal = () => {
   let bodyContent = (
     <div className="flex flex-col gap-8">
       <Heading
-        title="Where do you wana go"
+        title="Where do you want to go"
         subtitle="Find the perfect location!"
       />
       <CountrySelect
@@ -140,7 +140,7 @@ const SearchModal = () => {
     bodyContent = (
       <div className="flex flex-col gap-8">
         <Heading
-          title="Where do you want to go?"
+          title="When do you want to go?"
           subtitle="Make sure everyone is free!"
         />
         <Calender
@@ -154,7 +154,7 @@ const SearchModal = () => {
   if (step === STEP.INFO) {
     bodyContent = (
       <div className="flex flex-col gap-8">
-        <Heading title="More information" subtitle="Find you perfect place!" />
+        <Heading title="More information." subtitle="Find you perfect place!" />
         <Counter
           title="Guests"
           subtitle="How many guests are coming?"
