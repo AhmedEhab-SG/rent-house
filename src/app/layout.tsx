@@ -8,6 +8,7 @@ import LoginModal from "@/components/modals/LoginModal";
 import getCurrentUser from "./actions/getCurrentUser";
 import RentModal from "@/components/modals/RentModal";
 import SearchModal from "@/components/modals/SreachModal";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Airbnb",
@@ -33,8 +34,9 @@ export default async function RootLayout({
         <LoginModal />
         <RegisterModal />
         <Navbar currentUser={currentUser} />
-        <div className="pb-20 pt-28">{children}</div>
+        <div className="min-h-screen pt-28">{children}</div>
       </body>
+      <Footer />
     </html>
   );
 }
