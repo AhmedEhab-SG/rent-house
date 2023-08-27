@@ -18,11 +18,10 @@
 » Axios Lib <br>
 » Bcrypt Lib <br>
 » Leaflet Lib <br>
-» currencyfreaks API <br>
-» freegold API <br>
+» World-Countries Lib <br>
 
-Live Link: <a href="https://next-airbnbtsx.vercel.app/">RateWatch</a>
+Live Link: <a href="https://next-airbnbtsx.vercel.app/">Next Airbnb</a>
 
 <h1 align="center" >
-<img src="./public/img/rateWatch.img.png" alt="rate-watch-cover">
+<img src="./public/img/rateWatch.img.png" alt="next-airbnb">
 </h1>
