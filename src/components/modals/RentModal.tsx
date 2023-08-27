@@ -6,7 +6,12 @@ import { useMemo, useState } from "react";
 import Heading from "../shared/Heading";
 import { categoriesArr } from "../navbar/Categories";
 import CategoryInput from "../input/CategoryInput";
-import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
+import {
+  FieldErrorsImpl,
+  FieldValues,
+  SubmitHandler,
+  useForm,
+} from "react-hook-form";
 import CountrySelect from "../input/CountrySelect";
 import dynamic from "next/dynamic";
 import Counter from "../input/Counter";
@@ -218,9 +223,12 @@ const RentModal = () => {
           label="Title"
           disabled={isLoading}
           register={register}
-          errors={errors}
+          errors={errors as FieldErrorsImpl}
           vaild="title"
-          required
+          required={{
+            validate: (value: string) =>
+              value.length >= 1 || "Please enter a vaild title.",
+          }}
         />
         <hr />
         <Input
@@ -228,9 +236,12 @@ const RentModal = () => {
           label="Description"
           disabled={isLoading}
           register={register}
-          errors={errors}
+          errors={errors as FieldErrorsImpl}
           vaild="description"
-          required
+          required={{
+            validate: (value: string) =>
+              value.length >= 1 || "Please enter a vaild description.",
+          }}
         />
       </div>
     );
@@ -250,9 +261,12 @@ const RentModal = () => {
           type="number"
           disabled={isLoading}
           register={register}
-          errors={errors}
+          errors={errors as FieldErrorsImpl}
           vaild="vaild amount"
-          required
+          required={{
+            validate: (value: string) =>
+              value.length >= 1 || "Please enter a vaild price.",
+          }}
         />
       </div>
     );
