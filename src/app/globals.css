@@ -4,7 +4,29 @@
 
 html,
 body:root {
-  min-height: 100%
+  min-height: 100%;
+}
+
+* {
+  scroll-behavior: smooth;
+  -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #acacac;
+  border: 3px solid #ffff;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 14px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #969696;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background-color: #808080;
 }
 
 .leaflet-bottom,
