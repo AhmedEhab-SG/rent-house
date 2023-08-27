@@ -3,7 +3,6 @@
 import { Fragment, useCallback, useEffect, useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import Button from "../shared/Button";
-import useRegisterModal from "@/hooks/useRegisterModal";
 
 interface ModalProps {
   isOpen?: boolean;
@@ -30,7 +29,6 @@ const Modal: React.FC<ModalProps> = ({
   secondaryAction,
   secondaryActionLabel,
 }) => {
-  const registerModal = useRegisterModal();
   [];
   const [showModal, setShowModal] = useState(isOpen);
 

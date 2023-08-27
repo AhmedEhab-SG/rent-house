@@ -14,7 +14,7 @@ interface HomeClientProps {
 }
 
 const HomeClient: React.FC<HomeClientProps> = ({ listingArr, currentUser }) => {
-  const { value, increment, decrement, isFiltered } = useFilter();
+  const { value, increment, isFiltered } = useFilter();
   const listingArrSliced = isFiltered ? listingArr.slice(0, value) : listingArr;
 
   if (listingArr.length === 0) {
@@ -61,9 +61,6 @@ const HomeClient: React.FC<HomeClientProps> = ({ listingArr, currentUser }) => {
         <div className="flex flex-col gap-8 justify-start items-center p-10">
           {isFiltered && value < listingArr.length && (
             <Button label="Show More" onClick={increment} homePage />
-          )}
-          {isFiltered && value >= listingArr.length && (
-            <Button label="Show Less" onClick={decrement} homePage outline />
           )}
         </div>
       </Container>
