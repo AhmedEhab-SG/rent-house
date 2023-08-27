@@ -9,6 +9,7 @@ interface Buttonprops {
   outline?: boolean;
   small?: boolean;
   icon?: IconType;
+  homePage?: boolean;
 }
 
 const Button: React.FC<Buttonprops> = ({
@@ -18,6 +19,7 @@ const Button: React.FC<Buttonprops> = ({
   outline,
   small,
   icon: Icon,
+  homePage,
 }) => {
   return (
     <button
@@ -30,7 +32,7 @@ const Button: React.FC<Buttonprops> = ({
   rounded-lg
   hover:opacity-80
   transition
-  w-full
+  ${homePage ? "w-1/4" : "w-full"}
   ${outline ? "bg-white" : "bg-rose-500"}
   ${outline ? "border-black" : "border-rose-500"}
   ${outline ? "text-black" : "text-white"}
@@ -38,6 +40,7 @@ const Button: React.FC<Buttonprops> = ({
   ${small ? "text-sm" : "text-md"}
   ${small ? "font-light" : "font-semibold"}
   ${small ? "border-[1px]" : "border-2"}
+
   `}
     >
       {Icon && (

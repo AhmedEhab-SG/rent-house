@@ -4,6 +4,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { IconType } from "react-icons";
 import { useCallback } from "react";
 import queryString from "query-string";
+import useFilter from "@/hooks/useFilter";
 
 interface CategoryBoxProps {
   label: string;
@@ -18,12 +19,14 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
 }) => {
   const router = useRouter();
   const params = useSearchParams();
+  const { onFilterHide, onFilterShow } = useFilter();
 
   const handleClick = useCallback(() => {
     let currentQuery = {};
 
     if (params) {
       currentQuery = queryString.parse(params.toString());
+      onFilterHide();
     }
     const updatedQuery: any = {
       ...currentQuery,
@@ -31,6 +34,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
     };
 
     if (params?.get("category") === label) {
+      onFilterShow();
       delete updatedQuery.category;
     }
 
@@ -43,7 +47,7 @@ const CategoryBox: React.FC<CategoryBoxProps> = ({
     );
 
     router.push(url);
-  }, [label, router, params]);
+  }, [label, router, params, onFilterHide, onFilterShow]);
 
   return (
     <div
