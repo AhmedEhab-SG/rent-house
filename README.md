@@ -20,8 +20,8 @@
 » Leaflet Lib <br>
 » World-Countries Lib <br>
 
-Live Link: <a href="https://next-airbnbtsx.vercel.app/">Next Airbnb</a>
+Live Link: <a href="https://next-airbnbtsx.vercel.app/">next-airbnb</a>
 
 <h1 align="center" >
-<img src="./public/img/rateWatch.img.png" alt="next-airbnb">
+<img src="./public/images/next-airbnb.png" alt="next-airbnb">
 </h1>

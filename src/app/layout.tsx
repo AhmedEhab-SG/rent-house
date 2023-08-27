@@ -11,7 +11,7 @@ import SearchModal from "@/components/modals/SreachModal";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Airbnb",
+  title: "airbnb",
   description: "Next Airbnb",
 };
 
