@@ -1,14 +1,16 @@
 "use client";
 
+import useFilter from "@/hooks/useFilter";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
 const Logo = () => {
   const router = useRouter();
+  const { onFilterShow } = useFilter();
 
   return (
     <Image
-      onClick={() => router.push("/")}
+      onClick={() => (router.push("/"), onFilterShow())}
       alt="Logo"
       className="hidden md:block cursor-pointer"
       height="100"

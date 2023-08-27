@@ -1,6 +1,11 @@
 "use client";
 
-import { FieldErrors, FieldValues, UseFormRegister } from "react-hook-form";
+import {
+  FieldErrors,
+  FieldErrorsImpl,
+  FieldValues,
+  UseFormRegister,
+} from "react-hook-form";
 import { BiDollar } from "react-icons/bi";
 
 interface InputProps {
@@ -9,10 +14,10 @@ interface InputProps {
   type?: string;
   disabled?: boolean;
   formatPrice?: boolean;
-  required?: boolean;
+  required?: object;
   vaild?: string;
   register: UseFormRegister<FieldValues>;
-  errors: FieldErrors;
+  errors: FieldErrorsImpl<FieldErrors>;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -24,7 +29,6 @@ const Input: React.FC<InputProps> = ({
   required,
   register,
   errors,
-  vaild,
 }) => {
   return (
     <div className="w-full relative">
@@ -34,7 +38,7 @@ const Input: React.FC<InputProps> = ({
       <input
         id={id}
         disabled={disabled}
-        {...register(id, { required })}
+        {...register(id, required)}
         placeholder=" "
         type={type}
         className={`
@@ -56,7 +60,7 @@ const Input: React.FC<InputProps> = ({
         `}
       />
       {errors[id] && (
-        <p className="text-rose-500  p-1 pl-2">Please enter a {vaild}</p>
+        <p className="text-rose-500  p-1 pl-2">{errors[id]?.message}</p>
       )}
       <label
         className={`

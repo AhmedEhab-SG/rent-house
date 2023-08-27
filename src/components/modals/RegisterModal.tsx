@@ -3,7 +3,12 @@
 import axios from "axios";
 import { AiFillGithub } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
-import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
+import {
+  FieldErrorsImpl,
+  FieldValues,
+  SubmitHandler,
+  useForm,
+} from "react-hook-form";
 import useRegisterModal from "@/hooks/useRegisterModal";
 import { useState } from "react";
 import Modal from "./Modal";
@@ -62,8 +67,11 @@ const RegisterModal = () => {
         label="Email"
         disabled={isLoading}
         register={register}
-        errors={errors}
-        required
+        errors={errors as FieldErrorsImpl}
+        required={{
+          validate: (value: string) =>
+            value.includes("@") || `Email must inculde "@".`,
+        }}
         vaild="email"
       />
       <Input
@@ -71,8 +79,12 @@ const RegisterModal = () => {
         label="Name"
         disabled={isLoading}
         register={register}
-        errors={errors}
-        required
+        errors={errors as FieldErrorsImpl}
+        required={{
+          validate: (value: string) =>
+            value.length >= 5 ||
+            "Name must be more than or equal 5 characters.",
+        }}
         vaild="name"
       />
       <Input
@@ -81,8 +93,12 @@ const RegisterModal = () => {
         label="Password"
         disabled={isLoading}
         register={register}
-        errors={errors}
-        required
+        errors={errors as FieldErrorsImpl}
+        required={{
+          validate: (value: string) =>
+            value.length >= 6 ||
+            "Password must be more than or equal 6 characters.",
+        }}
         vaild="password"
       />
     </div>

@@ -48,8 +48,18 @@ const HomeClient: React.FC<HomeClientProps> = ({ listingArr, currentUser }) => {
         >
           {listing}
         </div>
+        {isFiltered && value >= listingArr.length && (
+          <EmptyState title="Great!" subtitle="You Are All Cought Up." page />
+        )}
+        {isFiltered && value < listingArr.length && (
+          <EmptyState
+            title="There is More!"
+            subtitle="Continue Exploring Our Homes."
+            page
+          />
+        )}
         <div className="flex flex-col gap-8 justify-start items-center p-10">
-          {isFiltered && value <= listingArr.length && (
+          {isFiltered && value < listingArr.length && (
             <Button label="Show More" onClick={increment} homePage />
           )}
           {isFiltered && value >= listingArr.length && (

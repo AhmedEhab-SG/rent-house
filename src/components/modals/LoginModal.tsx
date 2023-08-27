@@ -3,7 +3,12 @@
 import { signIn } from "next-auth/react";
 import { AiFillGithub } from "react-icons/ai";
 import { FcGoogle } from "react-icons/fc";
-import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
+import {
+  FieldErrorsImpl,
+  FieldValues,
+  SubmitHandler,
+  useForm,
+} from "react-hook-form";
 import useLoginModal from "@/hooks/useLoginModal";
 import useRegisterModal from "@/hooks/useRegisterModal";
 import { useCallback, useState } from "react";
@@ -63,9 +68,12 @@ const LoginModal = () => {
         label="Email"
         disabled={isLoading}
         register={register}
-        errors={errors}
+        errors={errors as FieldErrorsImpl}
         vaild="email"
-        required
+        required={{
+          validate: (value: string) =>
+            value.includes("@") || `Email must inculde "@".`,
+        }}
       />
       <Input
         id="password"
@@ -73,9 +81,13 @@ const LoginModal = () => {
         label="Password"
         disabled={isLoading}
         register={register}
-        errors={errors}
+        errors={errors as FieldErrorsImpl}
         vaild="password"
-        required
+        required={{
+          validate: (value: string) =>
+            value.length >= 6 ||
+            "Password must be more than or equal 6 characters.",
+        }}
       />
     </div>
   );
