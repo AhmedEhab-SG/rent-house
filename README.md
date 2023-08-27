@@ -1,34 +1,28 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center"><img style="width:16%" src="./public/images/logo.png"/></div>
 
-## Getting Started
+<h1 align="center"> Next Airbnb </h1>
 
-First, run the development server:
+### About Project:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+#### A full-stack Airbnb clone application that replicates the core features of Airbnb. It allows users to list, discover, and book accommodations for short-term rentals. It includes features such as user registration, property listings with descriptions and photos, booking and reservation management.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Made with:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+» Next JS <br>
+» TypeScript <br>
+» Tailwind CSS <br>
+» MongoDb <br>
+» Prisma <br>
+» Next-Auth <br>
+» Zustand <br>
+» Axios Lib <br>
+» Bcrypt Lib <br>
+» Leaflet Lib <br>
+» currencyfreaks API <br>
+» freegold API <br>
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Live Link: <a href="https://next-airbnbtsx.vercel.app/">RateWatch</a>
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<h1 align="center" >
+<img src="./public/img/rateWatch.img.png" alt="rate-watch-cover">
+</h1>
