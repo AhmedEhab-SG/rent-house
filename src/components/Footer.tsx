@@ -8,7 +8,7 @@ import logo from "../assets/airbnb-logo.png";
 const Footer = () => {
   return (
     <ClientOnly>
-      <footer className="flex flex-col md:flex-row justify-evenly items-center bg-slate-200 w-full p-2 font-semibold text-gray-700 text-lg">
+      <footer className="flex flex-col md:flex-row justify-evenly items-center bg-gray-100 w-full p-2 font-semibold text-gray-700 text-lg">
         <div className="flex justify-center items-center gap-2 mt-1 text-rose-500 font-bold">
           <Image src={logo} className="w-8" alt="airbnb-logo" />
           <div className="">next-airbnb</div>
