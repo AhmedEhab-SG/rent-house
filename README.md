@@ -1,6 +1,6 @@
-<div align="center"><img style="width:16%" src="./public/images/red-logo"/></div>
+<div align="center"><img style="width:16%" src="./public/images/red-logo.png"/></div>
 
-<h1 align="center"> Next Airbnb </h1>
+<h1 align="center"> Rent House </h1>
 
 ### About Project:
 
@@ -23,5 +23,5 @@
 Live Link: <a href="https://next-gitairprivate.vercel.app/">next-airbnb</a>
 
 <h1 align="center" >
-<img src="./public/images/rent-house.png" alt="next-airbnb">
+<img src="./public/images/rent-house.png" alt="rent-House">
 </h1>
