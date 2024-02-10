@@ -42,7 +42,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentUser }) => {
             >
               <Logo />
               <p className="text-red-700 font-extrabold text-lg hidden md:block">
-                Rent-House
+                Rent-Home
               </p>
             </div>
             <Search />

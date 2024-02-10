@@ -11,8 +11,8 @@ import SearchModal from "@/components/modals/SreachModal";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Rent-House",
-  description: "Rent-House NOT REAL WEBSITE OR BRNAD NAME",
+  title: "Rent-Home",
+  description: "Rent-Home NOT REAL WEBSITE OR BRNAD NAME",
 };
 
 const font = Nunito({
