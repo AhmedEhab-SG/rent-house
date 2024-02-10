@@ -4,7 +4,7 @@
 
 ### About Project:
 
-#### A full-stack Airbnb clone application that replicates the core features of Airbnb. It allows users to list, discover, and book accommodations for short-term rentals. It includes features such as user registration, property listings with descriptions and photos, booking and reservation management.
+#### A full-stack application MVP to Rent House that replicates the core features. It allows users to list, discover, and book accommodations for short-term rentals. It includes features such as user registration, property listings with descriptions and photos, booking and reservation management.
 
 ### Made with:
 
