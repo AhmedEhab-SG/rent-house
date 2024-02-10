@@ -11,8 +11,8 @@ import SearchModal from "@/components/modals/SreachModal";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "airbnb",
-  description: "Next Airbnb",
+  title: "Rent-House",
+  description: "Rent-House",
 };
 
 const font = Nunito({
@@ -34,7 +34,7 @@ export default async function RootLayout({
         <LoginModal />
         <RegisterModal />
         <Navbar currentUser={currentUser} />
-        <div className="min-h-screen pt-28">{children}</div>
+        <div className="min-h-screen pt-32">{children}</div>
         <hr />
         <Footer />
       </body>
