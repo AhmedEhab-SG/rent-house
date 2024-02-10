@@ -20,7 +20,9 @@
 » Leaflet Lib <br>
 » World-Countries Lib <br>
 
-Live Link: <a href="https://next-gitairprivate.vercel.app/">next-airbnb</a>
+Live Link: <a href="">Rent-House</a>
+
+This is not any a Real or an Official Brand's Website
 
 <h1 align="center" >
 <img src="./public/images/rent-house.png" alt="rent-House">
