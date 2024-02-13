@@ -22,7 +22,7 @@
 
 Live Link: <a href="">Rent-Home</a>
 
-This is not any a Real or an Official Brand's Website
+<div align="center">This is not any a Real or an Official Brand's Website</div>
 
 <h1 align="center" >
 <img src="./public/images/rent-home.png" alt="rent-Home">
