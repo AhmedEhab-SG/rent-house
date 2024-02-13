@@ -37,7 +37,7 @@ const Input: React.FC<InputProps> = ({
       )}
       <input
         id={id}
-        disabled={true || disabled}
+        disabled={true || disabled} //disabled
         {...register(id, required)}
         placeholder=" "
         type={type}
@@ -83,6 +83,8 @@ const Input: React.FC<InputProps> = ({
       >
         {label}
       </label>
+      <p className="text-red-700">Disabled for legal reasons.</p>{" "}
+      {/*  disabled */}
     </div>
   );
 };
