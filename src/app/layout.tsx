@@ -34,7 +34,7 @@ export default async function RootLayout({
         <LoginModal />
         <RegisterModal />
         <Navbar currentUser={currentUser} />
-        <div className="min-h-screen pt-36">{children}</div>
+        <div className="min-h-[90vh] pt-36">{children}</div>
         <hr />
         <Footer />
       </body>
