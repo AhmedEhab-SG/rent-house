@@ -95,7 +95,7 @@ const LoginModal = () => {
   const footerContent = (
     <div className="flex flex-col gap-4 mt-3">
       <hr />
-      <Button
+      {/* <Button
         disabled={isLoading} //disable form
         outline
         label="Continue with Google"
@@ -108,7 +108,7 @@ const LoginModal = () => {
         label="Continue with Github"
         icon={AiFillGithub}
         onClick={() => signIn("github")}
-      />
+      />  remove social login */}
       <div
         className="
       text-neutral-500

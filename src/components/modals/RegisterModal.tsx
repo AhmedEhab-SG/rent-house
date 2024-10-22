@@ -111,7 +111,7 @@ const RegisterModal = () => {
   const footerContent = (
     <div className="flex flex-col gap-4 mt-3">
       <hr />
-      <Button
+      {/* <Button
         disabled={isLoading} //disable form
         outline
         label="Register with Google"
@@ -124,7 +124,7 @@ const RegisterModal = () => {
         label="Register with Github"
         icon={AiFillGithub}
         onClick={() => signIn("github")}
-      />
+      />  remove social register */}
       <div
         className="
       text-neutral-500
